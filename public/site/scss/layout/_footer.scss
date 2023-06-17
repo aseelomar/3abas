@@ -1,0 +1,102 @@
+footer {
+  padding: 40px 0;
+  background-color: $purple-color;
+  @include respond-to-max-width('640px') {
+    padding:20px 0;
+  }
+  .content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include respond-to-max-width('860px') {
+      flex-direction: column;
+      gap:30px;
+    }
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      @include respond-to-min-width('1750px') {
+        gap: 100px;
+      }
+      @include respond-to-max-width('1080px') {
+        gap: 30px;
+      }
+      @include respond-to-max-width('860px') {
+        flex-direction: column;
+        gap:30px;
+      }
+      .logo {
+        span {
+          font-family: "Cairo", sans-serif;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 1;
+          color: #191414;
+          @include respond-to-min-width('1750px') {
+            font-size: 50px;
+          }
+          @include respond-to-max-width('1080px') {
+            font-size: 36px;
+          }
+          @include respond-to-max-width('640px') {
+            font-size: 24px;
+          }
+        }
+      }
+      .links{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @include respond-to-min-width('1750px') {
+          gap: 50px;
+        }
+        li {
+          a {
+            line-height: 1;
+            transition: all 0.3s ease-in-out;
+            color: $white-color;
+            font-weight: 400;
+            font-size: 22px;
+            @include respond-to-min-width('1750px') {
+              font-size: 30px;
+            }
+            @include respond-to-max-width('1080px') {
+              font-size: 16px;
+            }
+            @include respond-to-max-width('640px') {
+              font-size: 14px;
+            }
+            &:hover {
+              color: $yellow-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.social-media-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  li {
+    a {
+      width: 36px;
+      display: grid;
+      place-items: center;
+      svg {
+        path {
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            stroke: $white-color
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@mixin one-line {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* content better media queries */
+@mixin respond-to-max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+@mixin respond-to-min-width($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+@mixin oneline(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin oneline1($number-line){
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $number-line;
+  -webkit-box-orient: vertical;
+}
